@@ -16,7 +16,10 @@ Contents
 ========
 
 .. toctree:: 
-    ports and indicators
+    :numbered:
+    :maxdepth: 2
+
+    portsindicators
     requirements
     installation
 
