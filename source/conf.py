@@ -1,7 +1,8 @@
 # Configuration file for the Sphinx documentation builder.
+# import os, sys
+# sys.path.insert(0, os.path.abspath(".."))
 
 # -- Project information
-
 project = 'PCIe-over-USB4 Manual'
 copyright = '2023, cronologic'
 author = 'Max Kircher'
@@ -34,5 +35,9 @@ html_theme = 'sphinx_rtd_theme'
 rinoh_documents = [{
     'doc':'index',
     'target':'man-PCIe-over-USB4-rinoh',
-    'template':'book'
+    'template':r'.\pdftemplate.rtt',
 }]
+
+# latex_toplevel_sectioning = 'section'
+
+

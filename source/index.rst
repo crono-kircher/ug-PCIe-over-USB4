@@ -12,14 +12,12 @@ This will be available as pdf-download and online at
 .. note:: 
     This manual is under active development.
 
-Contents
-========
-
 .. toctree:: 
     :numbered:
     :maxdepth: 2
+    :hidden:
 
-    portsindicators
+    portsindicators 
     requirements
     installation
 

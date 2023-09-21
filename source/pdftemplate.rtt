@@ -1,0 +1,5 @@
+[TEMPLATE_CONFIGURATION]
+name = pdftemplate
+template = article
+
+stylesheet = pdfstylesheet.rts

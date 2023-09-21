@@ -25,6 +25,8 @@ if errorlevel 9009 (
 	exit /b 1
 )
 
+REM -a -E forces a full rebuild, even if the nothing (or supposedly nothing)
+REM was changed
 %SPHINXBUILD% -M %1 %SOURCEDIR% %BUILDDIR% %SPHINXOPTS% %O% -a -E
 goto end
 

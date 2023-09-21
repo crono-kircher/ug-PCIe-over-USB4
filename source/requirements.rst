@@ -1,4 +1,4 @@
 Requirements
 ============
 
-What is necessary to operate the device?
+What is necessary to *operate* the device?
