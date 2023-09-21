@@ -33,6 +33,6 @@ html_theme = 'sphinx_rtd_theme'
 # -- pdf build using rinoh
 rinoh_documents = [{
     'doc':'index',
-    'target':'man-PCIe-over-USB4',
+    'target':'man-PCIe-over-USB4-rinoh',
     'template':'book'
 }]
