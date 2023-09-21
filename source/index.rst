@@ -10,7 +10,7 @@ This will be available as pdf-download and online at
 
 
 .. note:: 
-    This manual is under active development. Will this appear now?
+    This manual is under active development.
 
 Contents
 ========
