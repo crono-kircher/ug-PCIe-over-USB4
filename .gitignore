@@ -1,1 +1,4 @@
 build/
+.vscode/
+source/_ext/__pycache__/
+log.txt

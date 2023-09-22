@@ -1,10 +1,14 @@
 # Configuration file for the Sphinx documentation builder.
 
+import os, sys
+
+sys.path.append(os.path.abspath("./_ext"))
+
 # -- Project information
 
-project = 'PCIe-over-USB4 Manual'
-copyright = '2023, cronologic'
-author = 'Max Kircher'
+project = 'PCIe-to-USB4 adapter - User Guide'
+copyright = '2023, cronologic GmbH & Co. KG'
+author = 'cronologic GmbH & Co. KG'
 
 release = '0.1'
 version = '0.1.0'
@@ -29,3 +33,20 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 html_theme = 'sphinx_rtd_theme'
+
+# latex customization
+latex_engine = 'xelatex'
+latex_elements = {
+    "fontpkg" : r"""
+    \setmainfont{TeX Gyre Schola}
+    \setsansfont{TeX Gyre Heros}
+    \setmonofont{Fira Code}
+    """,
+    # "preamble": r"\usepackage{cronologicug}"
+}
+
+numfig = True
+numfig_format = {
+    "figure":"Fig. %s:"
+}
+numfig_secnum_depth = 0

@@ -1,25 +1,29 @@
-#######################
-PCIe over USB4 - Manual
-#######################
+#################################
+PCIe-to-USB4 Adapter - User Guide
+#################################
 
-The PCIe-over-USB4 crate offers the ability to connect your PCIe device
-via your USB4 port.
+The PCIe-to-USB4 adapter offers the ability our time-to-digital converters (TDCs)
+`TimeTagger <https://www.cronologic.de/product/timetagger>`_, 
+`xTDC4-PCIe <https://www.cronologic.de/product/xtdc4-pcie>`_, and 
+`xHPTDC8-PCIe <https://www.cronologic.de/product/xhptdc8-pcie>`_ to your
+device via USB4/Thunderbolt connectors.
 
-This will be available as pdf-download and online at 
+This user guide provides an overview of the adapter. The APIs and interfaces
+of the respective TDC-card are unchanged, information of which can be found online
+at `www.cronologic.de/support/downloads
+<https://www.cronologic.de/support/downloads>`_.
+
+This user guide is available at
 `readthedoc <https://cronologic-man-pcie-over-usb4.readthedocs.io/en/latest/>`_
-
+and at `<www.docs.cronologic.de>`_ as HTML and as PDF download.
 
 .. note:: 
-    This manual is under active development.
-
-Contents
-========
+    This user guide is under active development.
 
 .. toctree:: 
     :numbered:
-    :maxdepth: 2
 
-    portsindicators
+    hardware
     requirements
     installation
 
