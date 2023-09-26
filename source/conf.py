@@ -60,7 +60,7 @@ latex_additional_files = ["sphinxcronologic.sty", "extraplaceins.sty"]
 
 numfig = True
 numfig_format = {
-    "figure":"Fig. %s:",
-    "table":"Tab. %s:"
+    "figure":"Figure %s:",
+    "table":"Table %s:"
 }
 numfig_secnum_depth = 0

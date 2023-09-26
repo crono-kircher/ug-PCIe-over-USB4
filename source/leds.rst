@@ -24,7 +24,7 @@ described in :numref:`Tabs. %s<tabLED3>` and :numref:`%s<tabLED4>`.
     =====     ===========
     Color     Voltage supplied by USB-C port
     =====     ===========
-    gree      :math:`>` 8 |nbsp| V
+    green     :math:`>` 8 |nbsp| V
     red       :math:`<` 8 |nbsp| V (insufficient)
     =====     ===========
 
