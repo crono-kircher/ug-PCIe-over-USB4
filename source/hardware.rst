@@ -6,22 +6,37 @@ converters via USB4/Thunderbolt while keeping the same Driver Programming API
 for a connection via PCIe.
 
 
-Thunderbolt2PCIe Connectors
----------------------------
-:numref:`Figure %s<fig1>` gives an overview of the adapter.
+:numref:`Figure %s<fig1>` gives an overview of the adapter and
+:numref:`Tab. %s<tab1>` gives an overview of the interface.
 
 .. _fig1:
 .. figure:: test.png
-    :alt: Front, back, and side view of the Thunderbolt2PCIe adapter
+    :alt: Front, back, and side view of the Thunderbolt2PCIe adapter.
     
-    Dummy picture.
+    Dummy picture. For a description of the labels, see :numref:`Tab. %s<tab1>`.
 
-Ports
------
-Here, we will see the ports that exist on the box and what they do.
+.. tabularcolumns:: c|c
 
+.. _tab1:
+.. table:: Interface of the Thunderbolt2PCIe adapter.
 
-Indicator LEDs
---------------
+    =====  ===========
+    Label  Description
+    =====  ===========
+    \(1)    Input for external power supply
+    \(2)    USB-C / Thunderbolt connector
+    \(3)    Status LED external power supply
+    \(4)    Status LED for power supply over USB-C
+    =====  ===========
 
-Here, the meaning of all indicator LEDs will be explained.
+Section
+-------
+
+Subsection
+~~~~~~~~~~
+
+Subsubsection
+^^^^^^^^^^^^^
+
+Paragraph
+'''''''''

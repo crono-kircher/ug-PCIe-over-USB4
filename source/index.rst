@@ -1,12 +1,15 @@
-#################################
-PCIe-to-USB4 Adapter - User Guide
-#################################
+########################################
+PCIe-to-USB4 Adapter |hyphen| User Guide
+########################################
 
-The PCIe-to-USB4 adapter offers the ability our time-to-digital converters (TDCs)
-`TimeTagger <https://www.cronologic.de/product/timetagger>`_, 
-`xTDC4-PCIe <https://www.cronologic.de/product/xtdc4-pcie>`_, and 
-`xHPTDC8-PCIe <https://www.cronologic.de/product/xhptdc8-pcie>`_ to your
-device via USB4/Thunderbolt connectors.
+The PCIe-to-USB4 adapter offers the ability to connect our time-to-digital
+converters (TDCs), that is,
+
+- `TimeTagger <https://www.cronologic.de/product/timetagger>`_
+- `xTDC4-PCIe <https://www.cronologic.de/product/xtdc4-pcie>`_
+- `xHPTDC8-PCIe <https://www.cronologic.de/product/xhptdc8-pcie>`_
+
+to any USB4/Thunderbolt port.
 
 This user guide provides an overview of the adapter. The APIs and interfaces
 of the respective TDC-card are unchanged, information of which can be found online
@@ -22,8 +25,15 @@ and at `<www.docs.cronologic.de>`_ as HTML and as PDF download.
 
 .. toctree:: 
     :numbered:
+    :maxdepth: 2
 
     hardware
     requirements
     installation
+    leds
 
+.. raw:: latex
+
+    \clearpage
+
+.. |hyphen| unicode:: U+2012

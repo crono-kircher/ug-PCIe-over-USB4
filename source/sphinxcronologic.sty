@@ -1,49 +1,46 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{cronologicug}
+\ProvidesPackage{sphinxcronologic}
 \author{cronologic GmbH \& Co KG}
 
 %\DeclareOption*{\newcommand{\deviceName}{\CurrentOption}}
 
-% Kolja believes that usepackage should be replace by RequirePackage, but could not get it to work
 \PassOptionsToPackage{utf8}{inputenc}
 \RequirePackage{inputenc}
-\PassOptionsToPackage{usenames, dvipsnames}{color}
-\RequirePackage{color}
+\PassOptionsToPackage{usenames, dvipsnames}{xcolor}
+\RequirePackage{xcolor}
 \RequirePackage{graphicx} %for including figures
-\RequirePackage{scrhack}  % avoid float@addtolist warning in package "listing"
 \RequirePackage{tabularx}
+\RequirePackage{tikz} % double line border support
+\usetikzlibrary{calc}
+\RequirePackage{eso-pic}
+\RequirePackage{listings}%for code in latex document, might be the source of the float@addtolist warning
+\RequirePackage{scrhack}  % avoid float@addtolist warning in package "listing"
 \RequirePackage{amsmath} %for math environments
 \RequirePackage{siunitx}  % SI Unit package
 \PassOptionsToPackage{left=25mm, right=25mm, top=25mm, bottom=25mm}{geometry}
 \RequirePackage{geometry} %for page properties (pagestyle)
 \PassOptionsToPackage{section,subsection,subsubsection}{extraplaceins}
 \RequirePackage{extraplaceins} %for binding figures to a (sub-)section
-\RequirePackage{listings}%for code in latex document, might be the source of the float@addtolist warning
 \RequirePackage{textcomp}%for code in latex document
 \RequirePackage{balance}%for two-column layout
-\PassOptionsToPackage{colorlinks=true,linkcolor=blue}{hyperref}
-\RequirePackage{hyperref}
 \RequirePackage{array} %for centered AND constant width columns
 \RequirePackage{longtable}
 \PassOptionsToPackage{footsepline=1pt}{scrlayer-scrpage}
 \RequirePackage{makecell}  % multi line table cells
-% \RequirePackage[T1]{fontenc}  % fix warning for availability of bold slanted fonts
 \RequirePackage{fontspec}
+\RequirePackage{titlesec}  % customize headings
 \RequirePackage{attachfile2} 
-\RequirePackage{xcolor}
+\RequirePackage{incgraph} % to include the title page
+\PassOptionsToPackage{colorlinks=true,linkcolor=blue}{hyperref}
+\RequirePackage{hyperref}
 
 % \usepackage{auto-pst-pdf} % this enables postscript graphics for PDF
 
 
-\RequirePackage{incgraph} % to include the title page
 
-% double line border support
-\RequirePackage{tikz}
-\usetikzlibrary{calc}
-\RequirePackage{eso-pic}
 
  
-%%%%%%%%%% Defitinions for the whole document 
+%%%%%%%%%% Definitions for the whole document 
  
 % color definitions
 \definecolor{listinggray}{gray}{0.9}  
@@ -52,25 +49,39 @@
 \definecolor{crondarkblue}{RGB}{43, 119, 177} %2. Überschrift
 \definecolor{cronlightgreen}{RGB}{86,159,214} %3. Überschrift
 \definecolor{crongrey}{gray}{0.32} %Variablendeklaration API
-%
-%
-% \addtokomafont{chapter}{\color{crondarkgreen}}
-% \addtokomafont{section}{\color{crondarkblue}}
-% \addtokomafont{subsection}{\color{cronlightgreen}}
-%
 
 %import a title PDF and create TOC
 \newcommand{\cronofront}[1]{
 	\pagenumbering{Alph}   %this is invisible but avoids a warning for duplicate hyperlink targets
-	\newpage
-	\pagestyle{empty}
+	\clearpage
+	\thispagestyle{empty}
 	\incgraph[a4paper][width=\paperwidth]{#1}
-	\newpage     
+	\clearpage     
 	\tableofcontents
-	\newpage
-	\pagestyle{scrheadings}
+	\clearpage
 	\pagenumbering{arabic}
 }
+
+
+% format headings
+\titleformat{\chapter}%
+	{\LARGE\sffamily\bfseries\color{crondarkgreen}}%
+	{\thechapter}{1em}{}{}
+\titlespacing*{\chapter}%
+	{0ex}{0ex}{*2}
+
+\titleformat{\section}%
+	{\Large\bfseries\sffamily\color{crondarkblue}}%
+	{\thesection}{1em}{}{}
+
+\titleformat{\subsection}%
+	{\large\bfseries\sffamily\color{cronlightgreen}}%
+	{\thesubsection}{1em}{}{}
+
+\titleformat{\subsubsection}%
+	{\bfseries\itshape\sffamily\color{cronlightgreen}}%
+	{\thesubsubsection}{1em}{}{}
+
 
 \newcommand{\filesep}{\textbackslash\allowbreak}  % used in file pathes
 \newcommand{\lb}{\linebreak}
@@ -80,16 +91,3 @@
 \newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
 \renewcommand{\arraystretch}{1.6} 
 \parskip 8pt
-
-
-
-%%%%%%%%%%% Design Footer 
-% https://esc-now.de/_/latex-individuelle-kopf--und-fusszeilen-update
-% \setkomafont{footsepline}{\color{cronlightgreen}}
-% \pagestyle{scrheadings}
-% \clearpairofpagestyles
-% \ifoot{cronologic GmbH \& Co. KG}
-% \cfoot{\pagemark}
-% \ofoot{\deviceName\ User Guide \ugrev} 
-% \renewcommand*{\chapterpagestyle}{scrheadings} % The first page of a chapter should not look different
- 

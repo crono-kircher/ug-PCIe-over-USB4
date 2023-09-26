@@ -1,4 +1,8 @@
-build/
 .vscode/
 source/_ext/__pycache__/
 log.txt
+
+build/*
+!build/latex
+build/latex/*
+!build/latex/*.pdf
